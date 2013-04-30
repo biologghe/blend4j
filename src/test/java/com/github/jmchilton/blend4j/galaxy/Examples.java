@@ -1,15 +1,5 @@
 package com.github.jmchilton.blend4j.galaxy;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import javax.ws.rs.core.MediaType;
-
-import org.testng.annotations.Test;
-
 import com.github.jmchilton.blend4j.galaxy.beans.FilesystemPathsLibraryUpload;
 import com.github.jmchilton.blend4j.galaxy.beans.History;
 import com.github.jmchilton.blend4j.galaxy.beans.HistoryContents;
@@ -25,9 +15,13 @@ import com.github.jmchilton.blend4j.galaxy.beans.WorkflowInputs;
 import com.github.jmchilton.blend4j.galaxy.beans.WorkflowOutputs;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import java.util.Map;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.testng.Assert;
+
+import javax.ws.rs.core.MediaType;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.List;
+import java.util.Map;
 
 public class Examples {
   
@@ -35,7 +29,7 @@ public class Examples {
     runExamples();
   }
     
-  @Test
+  //@Test
   public static void runExamples() throws Exception {
     final String[] exampleMethods = new String[] {
         "listHistories",
