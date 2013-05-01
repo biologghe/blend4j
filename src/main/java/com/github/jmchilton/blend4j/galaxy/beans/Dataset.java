@@ -24,6 +24,7 @@ public class Dataset extends HistoryDetails implements HasGalaxyUrl {
     private String dbKey;
     private boolean visible;
     private String galaxyUrl;
+    private String miscInfo;
     private Map<String, Object> metaData = new HashMap<String, Object>();
 
     private static final String DELIMITER = ", ";
@@ -131,6 +132,17 @@ public class Dataset extends HistoryDetails implements HasGalaxyUrl {
     public Map<String, Object> getMetaData()
     {
         return metaData;
+    }
+
+    @JsonProperty("misc_info")
+    public void setMiscInfo(String miscInfo)
+    {
+        this.miscInfo = miscInfo;
+    }
+
+    public String getMiscInfo()
+    {
+        return miscInfo;
     }
 
     @JsonAnySetter
