@@ -4,7 +4,7 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
-import com.sun.jersey.api.json.JSONConfiguration;
+
 
 /**
  * Default and simplest possible implementation of WebResourceFactory.
@@ -51,7 +51,7 @@ public class DefaultWebResourceFactoryImpl implements WebResourceFactory {
    */
   protected com.sun.jersey.api.client.Client getJerseyClient() {
     final ClientConfig clientConfig = new DefaultClientConfig() ;
-    clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
+    //clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
     com.sun.jersey.api.client.Client client = com.sun.jersey.api.client.Client.create(clientConfig);
     if(DEBUG) {
       client.addFilter(new LoggingFilter(System.out));

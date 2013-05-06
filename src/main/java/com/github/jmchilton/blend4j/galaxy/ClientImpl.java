@@ -1,24 +1,22 @@
 package com.github.jmchilton.blend4j.galaxy;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jmchilton.blend4j.galaxy.beans.HasGalaxyUrl;
-import com.sun.jersey.api.client.ClientRequest;
-import java.io.IOException;
-import java.util.List;
-
-import javax.ws.rs.core.MediaType;
-
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
-
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.multipart.BodyPart;
 import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.multipart.file.FileDataBodyPart;
+import com.sun.jersey.multipart.file.StreamDataBodyPart;
+
+import javax.ws.rs.core.MediaType;
 import java.io.File;
-import java.net.URLEncoder;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 class ClientImpl {
@@ -125,5 +123,11 @@ class ClientImpl {
   protected Iterable<BodyPart> prepareUpload(final File file) {
     final FileDataBodyPart fdbp = new FileDataBodyPart("files_0|file_data", file);
     return Arrays.<BodyPart>asList(fdbp);
+  }
+
+  protected Iterable<BodyPart> prepareUpload(final String fileName, final InputStream inputStream)
+  {
+     final StreamDataBodyPart sdbp = new StreamDataBodyPart("files_0|file_data", inputStream, fileName);
+    return Arrays.<BodyPart>asList(sdbp);
   }
 }

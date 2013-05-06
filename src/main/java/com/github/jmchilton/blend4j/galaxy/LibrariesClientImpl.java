@@ -1,9 +1,6 @@
 package com.github.jmchilton.blend4j.galaxy;
 
-import java.util.List;
-
-import org.codehaus.jackson.type.TypeReference;
-
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.github.jmchilton.blend4j.galaxy.beans.DirectoryLibraryUpload;
 import com.github.jmchilton.blend4j.galaxy.beans.FileLibraryUpload;
 import com.github.jmchilton.blend4j.galaxy.beans.FilesystemPathsLibraryUpload;
@@ -12,7 +9,9 @@ import com.github.jmchilton.blend4j.galaxy.beans.LibraryContent;
 import com.github.jmchilton.blend4j.galaxy.beans.LibraryPermissions;
 import com.github.jmchilton.blend4j.galaxy.beans.UrlLibraryUpload;
 import com.sun.jersey.api.client.ClientResponse;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 class LibrariesClientImpl extends ClientImpl implements LibrariesClient {

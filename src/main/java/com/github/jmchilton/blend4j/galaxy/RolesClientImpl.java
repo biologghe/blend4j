@@ -1,10 +1,9 @@
 package com.github.jmchilton.blend4j.galaxy;
 
-import java.util.List;
-
-import org.codehaus.jackson.type.TypeReference;
-
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.github.jmchilton.blend4j.galaxy.beans.Role;
+
+import java.util.List;
 
 class RolesClientImpl extends ClientImpl implements RolesClient {
   private static final TypeReference<List<Role>> ROLE_LIST_TYPE_REFERENCE = new TypeReference<List<Role>>() {

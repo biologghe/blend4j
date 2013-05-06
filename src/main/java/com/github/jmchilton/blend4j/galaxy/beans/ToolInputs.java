@@ -1,9 +1,8 @@
 package com.github.jmchilton.blend4j.galaxy.beans;
 
-import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.annotate.JsonProperty;
+import java.util.Map;
 
 public class ToolInputs {
   private String toolId;

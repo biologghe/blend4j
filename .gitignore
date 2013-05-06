@@ -1,2 +1,9 @@
+# maven
 target
 test-output
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/

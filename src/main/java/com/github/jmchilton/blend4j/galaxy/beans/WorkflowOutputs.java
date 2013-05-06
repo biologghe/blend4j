@@ -1,7 +1,8 @@
 package com.github.jmchilton.blend4j.galaxy.beans;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
-import org.codehaus.jackson.annotate.JsonProperty;
 
 public class WorkflowOutputs {
   private String historyId;

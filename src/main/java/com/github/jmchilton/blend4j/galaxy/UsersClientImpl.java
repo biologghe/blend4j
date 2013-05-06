@@ -1,14 +1,13 @@
 package com.github.jmchilton.blend4j.galaxy;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.github.jmchilton.blend4j.galaxy.beans.User;
+import com.sun.jersey.api.client.ClientResponse;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.codehaus.jackson.type.TypeReference;
-
-import com.github.jmchilton.blend4j.galaxy.beans.User;
-import com.sun.jersey.api.client.ClientResponse;
 
 class UsersClientImpl extends ClientImpl implements UsersClient {
   private static final TypeReference<List<User>> USER_LIST_TYPE_REFERENCE = new TypeReference<List<User>>() {

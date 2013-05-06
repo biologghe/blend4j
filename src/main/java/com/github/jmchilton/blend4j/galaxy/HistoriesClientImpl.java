@@ -1,14 +1,13 @@
 package com.github.jmchilton.blend4j.galaxy;
 
-import java.util.List;
-
-import org.codehaus.jackson.type.TypeReference;
-
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.github.jmchilton.blend4j.galaxy.beans.Dataset;
 import com.github.jmchilton.blend4j.galaxy.beans.History;
-import com.github.jmchilton.blend4j.galaxy.beans.HistoryDetails;
 import com.github.jmchilton.blend4j.galaxy.beans.HistoryContents;
+import com.github.jmchilton.blend4j.galaxy.beans.HistoryDetails;
 import com.sun.jersey.api.client.ClientResponse;
+
+import java.util.List;
 
 class HistoriesClientImpl extends ClientImpl implements HistoriesClient {
 

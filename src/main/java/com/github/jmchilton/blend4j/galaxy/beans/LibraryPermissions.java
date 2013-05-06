@@ -1,9 +1,9 @@
 package com.github.jmchilton.blend4j.galaxy.beans;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.codehaus.jackson.annotate.JsonProperty;
 
 public class LibraryPermissions {
   private List<String> accessInRoles = new ArrayList<String>();

@@ -1,7 +1,6 @@
 package com.github.jmchilton.blend4j.galaxy.beans;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class HistoryContents extends History {
