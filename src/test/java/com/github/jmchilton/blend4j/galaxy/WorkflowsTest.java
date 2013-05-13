@@ -10,13 +10,12 @@ import com.github.jmchilton.blend4j.galaxy.beans.WorkflowInputs.ExistingHistory;
 import com.github.jmchilton.blend4j.galaxy.beans.WorkflowInputs.InputSourceType;
 import com.github.jmchilton.blend4j.galaxy.beans.WorkflowInputs.WorkflowInput;
 import com.github.jmchilton.blend4j.galaxy.beans.WorkflowOutputs;
-import com.sun.jersey.api.client.ClientResponse;
-import java.io.IOException;
-import java.util.Map;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.util.Map;
 
 public class WorkflowsTest {
   private static final String TEST_WORKFLOW_NAME = "TestWorkflow1";
