@@ -17,7 +17,7 @@ public class WorkflowInputs
   private WorkflowDestination destination;
   private boolean importInputsToHistory = false;
   private Map<String, WorkflowInput> inputs = new HashMap<String, WorkflowInput>();
-  private Map<String, ToolParameter> parameters = new HashMap<String, ToolParameter>();
+  private Map<String, Map<String,String>> parameters = new HashMap<String, Map<String, String>>();
 
   public void setWorkflowId(final String workflowId)
   {
@@ -55,12 +55,17 @@ public class WorkflowInputs
 
   public void setParameter(final String toolName, final ToolParameter toolParameter)
   {
-    this.parameters.put(toolName, toolParameter);
+    if (! parameters.containsKey(toolName))
+    {
+      Map<String,String> toolParameterMap = new HashMap<String, String>();
+      parameters.put(toolName, toolParameterMap);
+    }
+    this.parameters.get(toolName).put(toolParameter.getParameterName(),toolParameter.getParameterValue());
   }
 
   @JsonProperty("parameters")
   @JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
-  public Map<String, ToolParameter> getParameters()
+  public Map<String, Map<String,String>> getParameters()
   {
     return parameters;
   }
