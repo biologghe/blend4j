@@ -1,6 +1,9 @@
 package com.github.jmchilton.blend4j.galaxy.beans;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 /**
  * Created with IntelliJ IDEA.
  * User: mlogghe
@@ -19,6 +22,7 @@ public class ToolParameter
     this.parameterValue = parameterValue;
   }
 
+  @JsonProperty("param")
   public String getParameterName()
   {
     return parameterName;
@@ -29,6 +33,7 @@ public class ToolParameter
     this.parameterName = parameterName;
   }
 
+  @JsonProperty("value")
   public String getParameterValue()
   {
     return parameterValue;
